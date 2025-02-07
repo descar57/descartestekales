@@ -6,10 +6,6 @@
     <title>PORTOFOLIO</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
@@ -26,18 +22,23 @@
       >
       <nav>
         <a href="#" class="active">Home</a>
-        <a href="#about" >About</a>
+        <a href="#about">About</a>
         <a href="#">Contact</a>
       </nav>
     </header>
     <section class="home">
       <div class="home-content">
         <div class="home-img">
-          <img src="JADI IMG_0081.jpg" alt="Descartes Tekales" />
+          <img
+            src="JADI_IMG_0081.jpg"
+            alt="Foto Descartes Tekales, seorang mahasiswa pemrograman"
+          />
         </div>
         <div class="text-content">
           <h1>Descartes<span>Tekales</span></h1>
-          <h3 class="typing-text">Penjelasan Website Ini <span></span></h3>
+          <h3 id="typing-text" class="typing-text">
+            Penjelasan Website Ini <span></span>
+          </h3>
           <p>
             Ini adalah sebuah website tentang portofolio Descartes Tekales.
             <br />
@@ -72,17 +73,60 @@
           profesional. Sebagai seorang extrovert, saya ceria dan bersemangat
           dalam berinteraksi dengan orang lain. Saya memiliki minat besar dalam
           dunia informatika, khususnya coding dan AI, dan selalu tertarik
-          mengikuti perkembangan teknologi terbaru. <br />
-          <span class="tambahan"
-            >Saya harap website ini bisa memberikan informasi yang bermanfaat
-            bagi anda. Terima kasih.</span
-          >
+          mengikuti perkembangan teknologi terbaru.
         </p>
       </div>
     </section>
+
     <!-- FEATHER ICONS -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <script>
       feather.replace();
+    </script>
+    <script>
+      // Efek pengetikan
+      const typingText = document.getElementById("typing-text");
+      const text = typingText.innerText;
+      typingText.innerHTML = "";
+
+      let index = 0;
+      const typingSpeed = 200; // Kecepatan pengetikan
+
+      function type() {
+        if (index < text.length) {
+          typingText.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(type, typingSpeed);
+        }
+      }
+
+      type(); // Memulai efek pengetikan
+
+      // Animasi scroll untuk elemen
+      const animatedElements = document.querySelectorAll(".animate-on-scroll");
+
+      window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY + window.innerHeight;
+
+        animatedElements.forEach((element) => {
+          const elementPosition =
+            element.getBoundingClientRect().top + window.scrollY;
+
+          if (scrollPosition > elementPosition) {
+            element.classList.add("active");
+          } else {
+            element.classList.remove("active");
+          }
+        });
+      });
+
+      // Toggle Menu (untuk responsif di perangkat mobile)
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navMenu = document.querySelector("nav");
+
+      menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
     </script>
   </body>
 </html>
