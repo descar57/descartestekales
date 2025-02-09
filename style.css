@@ -138,6 +138,7 @@ h2 {
   color: var(--primary);
   margin: 0 0 10px 0;
   font-size: 2.5rem;
+  user-select: none;
 }
 
 h3 {
@@ -268,4 +269,9 @@ nav.active {
   nav.active {
     transform: translateX(0);
   }
+}
+
+.footer {
+  text-align: center;
+  user-select: none;
 }
