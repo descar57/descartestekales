@@ -302,8 +302,21 @@ nav.active {
     left: 0%;
     top: 100%;
     height: auto;
+<<<<<<< HEAD
     transition: none;
     
+=======
+    border-radius: 10px;
+    margin: 10.5px 0 5px;
+    border: var(--primary) solid 2px;
+  }
+
+  .sertifikat img:hover {
+    width: 300px;
+    margin: auto;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.1);
+>>>>>>> 961cb1aa54c95d9482c1388e606edba930af8eae
   }
 
   nav {
