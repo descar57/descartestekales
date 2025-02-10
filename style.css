@@ -214,18 +214,19 @@ social-icons a:hover {
 
 .sertifikat img {
   justify-content: center;
-  width: 300px;
+  width: 550px;
   height: auto;
   border-radius: 10px;
-  margin: 10px auto;
-  display: block;
+  margin: 10px 50px;
+  display: auto;
   border: var(--primary) solid 2px;
   filter: grayscale(100%);
+  transition: all 0.5s ease;
 }
 
 .sertifikat img:hover {
-  transition: all 0.5s ease-in-out;
-  transform: scale(1.4);
+  transition: all 0.5s ease;
+  transform: scale(1.1);
   opacity: 0.9;
   filter: grayscale(0);
 }
@@ -295,28 +296,13 @@ nav.active {
 
   #menu-toggle-checkbox {
     display: none;
-    
   }
 
   #menu-toggle-checkbox:checked ~ nav {
     left: 0%;
     top: 100%;
     height: auto;
-<<<<<<< HEAD
     transition: none;
-    
-=======
-    border-radius: 10px;
-    margin: 10.5px 0 5px;
-    border: var(--primary) solid 2px;
-  }
-
-  .sertifikat img:hover {
-    width: 300px;
-    margin: auto;
-    transition: all 0.5s ease-in-out;
-    transform: scale(1.1);
->>>>>>> 961cb1aa54c95d9482c1388e606edba930af8eae
   }
 
   nav {
@@ -338,9 +324,36 @@ nav.active {
     font-size: 1.5rem;
   }
 
+  .sertifikat {
+    margin-top: 35px;
+    text-align: center;
+    align-items: center;
+  }
 
+  .sertifikat p {
+    user-select: none;
+  }
+
+  .sertifikat img {
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
+    border: var(--primary) solid 2px;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+  }
+
+  .sertifikat img:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.4);
+    opacity: 0.9;
+    filter: grayscale(0);
+  }
+}
 .footer {
   text-align: center;
   user-select: none;
-}
 }
