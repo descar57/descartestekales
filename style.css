@@ -33,7 +33,7 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 6px rgba(244, 244, 244, 0.3);
 }
 
 .logo {
@@ -201,6 +201,33 @@ p {
   line-height: 1.6;
 }
 
+/* SERTIFIKAT */
+.sertifikat {
+  margin-top: 35px;
+  text-align: center;
+  align-items: center;
+}
+
+.sertifikat p {
+  user-select: none;
+  
+}
+
+.sertifikat img {
+  justify-content: space-between;
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
+  border: var(--primary) solid 2px;
+}
+
+.sertifikat img:hover {
+  margin-left: 10px;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.1);
+}
+
 /* Media Queries */
 
 /* Efek Typing */
@@ -247,6 +274,21 @@ nav.active {
     display: block;
     font-size: 2rem;
     cursor: pointer;
+  }
+
+  .sertifikat img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10.5px 0 5px;
+    border: var(--primary) solid 2px;
+  }
+
+  .sertifikat img:hover {
+    width: 330px;
+    margin: 10.5px;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.1);
   }
 
   nav {
